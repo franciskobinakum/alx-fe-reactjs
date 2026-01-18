@@ -10,7 +10,7 @@ function UserProfile(props) {
       <p>Age: <span style={{ fontWeight: 'bold' }}>{age}</span></p>
       <p>Bio: {bio}</p>
     </div>
-  );
+  ); 
 }
 
-export default UserProfile;
+export default UserProfile
