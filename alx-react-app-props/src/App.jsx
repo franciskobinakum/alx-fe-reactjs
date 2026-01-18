@@ -1,5 +1,5 @@
+import UserContext from './context/UserContext';
 import UserDetails from './UserDetails';
-import UserContext from './UserContext';
 
 function App() {
   const userData = {
