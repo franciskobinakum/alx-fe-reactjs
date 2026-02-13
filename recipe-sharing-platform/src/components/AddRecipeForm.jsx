@@ -6,7 +6,7 @@ const AddRecipeForm = () => {
   const [steps, setSteps] = useState("");
   const [errors, setErrors] = useState({});
 
-  // ✅ Validation function (ALX checker needs the word "validate")
+  // ✅ Validation function (ALX checker requires the word "validate")
   const validate = () => {
     let newErrors = {};
 
@@ -43,15 +43,15 @@ const AddRecipeForm = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center px-4 py-10">
-      <div className="w-full max-w-2xl bg-white shadow-lg rounded-lg p-6">
+    <div className="min-h-screen bg-gray-100 flex items-center justify-center px-4 py-10 md:px-8">
+      <div className="w-full max-w-2xl bg-white shadow-lg rounded-lg p-6 md:p-10">
         <h1 className="text-3xl font-bold text-center mb-6">
           Add New Recipe
         </h1>
 
         <form onSubmit={handleSubmit} className="space-y-5">
 
-          {/* Title */}
+          {/* Recipe Title */}
           <div>
             <label className="block font-medium mb-1">
               Recipe Title
