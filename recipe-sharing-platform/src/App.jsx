@@ -1,3 +1,7 @@
-<h1 className="text-blue-500 text-3xl font-bold">
-  Tailwind is Working!
-</h1>
+import HomePage from "./components/HomePage";
+
+function App() {
+  return <HomePage />;
+}
+
+export default App;
