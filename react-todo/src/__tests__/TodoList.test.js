@@ -1,8 +1,8 @@
 import { render, screen, fireEvent } from "@testing-library/react";
+import "@testing-library/jest-dom";
 import TodoList from "../components/TodoList";
 
 describe("TodoList Component", () => {
-
   test("renders initial todos", () => {
     render(<TodoList />);
     expect(screen.getByText("Learn React")).toBeInTheDocument();
@@ -12,7 +12,7 @@ describe("TodoList Component", () => {
   test("adds a new todo", () => {
     render(<TodoList />);
 
-    const input = screen.getByPlaceholderText("Add new todo");
+    const input = screen.getByPlaceholderText("Add a todo");
     const button = screen.getByText("Add");
 
     fireEvent.change(input, { target: { value: "New Task" } });
@@ -25,7 +25,6 @@ describe("TodoList Component", () => {
     render(<TodoList />);
 
     const todo = screen.getByText("Learn React");
-
     fireEvent.click(todo);
 
     expect(todo).toHaveStyle("text-decoration: line-through");
@@ -39,5 +38,4 @@ describe("TodoList Component", () => {
 
     expect(screen.queryByText("Learn React")).not.toBeInTheDocument();
   });
-
 });
